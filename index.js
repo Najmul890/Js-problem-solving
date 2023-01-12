@@ -1,17 +1,10 @@
-function findGCD(x,y){
-    if((typeof x!=="number") || (typeof y!=="number"))
-    return "wrong input";
-    x= Math.abs(x);
-    y= Math.abs(y);
-    while(y){
-        let t=y;
-        console.log("t is",t);
-        y=x % y;
-        console.log("y is",y)
-        x= t;
-        console.log("x is",x);
+//remove an element from an array
+function remove_an_element(arr, element){
+    let index= arr.indexOf(element);
+    if(index>-1){
+        arr.splice(index,1);
     }
-    return x;
+    return arr;
 }
-console.log(findGCD(15,21));
-//console.log(findGCD(3,5));
+console.log(remove_an_element([1,3,5,6,8],3));
+console.log(remove_an_element(['to','go','no','so'],'no'));
